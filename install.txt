@@ -1,0 +1,39 @@
+	1. Requisites:
+
+Before you can use this application you will need to set up some files on your system. First if you use Debian you will need to install following packages:
+
+	- apache2
+	- mysql-server
+	- php5
+	- phpmyadmin (not needed but recommended)
+	- sudo
+
+On Ubuntu and derivated distributions you will not need to install the sudo package, all of the packages listed above can easily be installed through the aptitude package manager.
+
+	2. Installation and configuration:
+
+Once all dependencies are installed you should create a new directory called /cryptoshare and add it to your apache configuration, an example of a configuration using https is included under the folder debian-configuration (default-ssl.conf).
+In this directory you will need to extract all the files contained in the folder cryptoshare.
+In order to use a ssl connection you will need to activate the modules ssl and rewrite from apache, this can be simply done by executing commands sudo a2enmod ssl and sudo a2enmod rewrite. After it , if you want to use the provided configuration for apache, you will first need to execute this command:
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:4096 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
+This will create a certificate which will be used by apache to provide a secure connection. (You might need to create the folder /etc/apache2/ssl)
+You can see a good explanation about configuring an apache server with ssl here: https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-apache-for-ubuntu-14-04
+
+Having configured the apache server, you will need to configure the access to the database, in order to do this, you will need to setup the username and password for your database in the file cryptoshare/php/conexion.php, changing the parameters $usuario and $clave. You will also need to import the database contained in debian-configuration. This is easily done from phpmyadmin.
+
+Next you will need to configure your sudoers file with the visudo command, if you don't want to mess arround you can simply change your file (/etc/sudoers) with the one providden in debian-configuration. This will allow the user www-data to perform some actions as sudo without entering any password. Be careful to give only read permisions to the sudoers file and change the pid and gid to root.
+
+Finally you will need to create a GPG certificate, in order to do so, simply execute te command sudo gpg --gen-key from your linux terminal and follow the steps (It is important to choose an algorithm which allows to encrypt files, not just sign them), remember the passphrase you give to your certificate since it is very important.
+Once you are done creating the certificate you will need to modify the files cryptoshare/crypt/.clave and cryptoshare/crypt/crypt.sh.
+
+To do so, you will need to change the password in the file .clave to the passphrase you used for your certificate, after this, you will need to execute the command sudo gpg -k and change the recipient information from the script crypt.sh (01A2F3FA) to the recipient information of the certificate you just created. This should appear after a slash (/) in the line starting with pub on your terminal.
+
+	3. Volunteer amendments.
+
+If you want so, you can change your php configuration file with the one providden under debian-configuration. You just need to replace the file /etc/php5/apache2/php.ini with the one mentioned before. This will allow for example, to upload files up to 150MB instead of 8 MB as default.
+
+
+Should you require asistance or want to notify me about improvements or mistakes you have found, feel free to contact me. Also contact me if you want to develop this software and make it look better or work more effectively, any help will be really apreciated.
+gabriel.velez(@)outlook.com
+
+Developed and written by gavesc7.
