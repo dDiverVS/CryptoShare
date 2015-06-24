@@ -1,0 +1,28 @@
+	.informacion {
+		margin-top: 10px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.left {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+
+	th {
+		background-color: #fff;
+		border: 3px solid #d3d3d3;
+		font-size: 1.5em;
+		color: #0666fa;
+		padding-bottom: 10px;
+	}
+
+	td {
+		background-color: #fff;
+		border: 3px solid #d3d3d3;
+		font-size: 1.5em;
+	}
+
+	img {
+		max-height: 250px;
+	}

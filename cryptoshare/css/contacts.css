@@ -1,0 +1,49 @@
+	/*Alineamos todos los formularios en el centro con un límite de un 80% de anchura*/
+	form {
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	/*También configuramos el estilo de los enlaces*/
+	td {
+		background-color: #ffffff;
+		opacity: 0.7;
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+
+	td a:link {
+		text-decoration: none;
+		color: #0000ff;
+	}
+
+	td a:visited {
+		color: #0000ff;
+	}
+
+	td a:hover {
+		text-decoration: underline;
+	}
+
+	td a:active {
+		color: #ff0000;
+	}
+
+	td.izquierda {
+		width: 82%;
+	}
+	
+	td.derecha {
+		width: 18%;
+	}
+	
+	td img {
+		height: auto;
+		max-height: 100px;
+		width: 60px;
+	}
+	
+	#buscar {
+		margin-top: 1%;
+	}	

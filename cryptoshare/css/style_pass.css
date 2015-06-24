@@ -1,0 +1,13 @@
+	/*Aquí configuro la posición del formulario que permitirá cambiar de contraseña a los usuarios*/
+	.contrasena {
+		margin-top: 4px;
+		margin-right: auto;
+		margin-left: auto;
+		opacity: 0.85;
+	}
+
+	.random {
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 2%;
+	}

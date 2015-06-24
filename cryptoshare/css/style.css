@@ -1,0 +1,90 @@
+	/*Comenzamos configurando el aspecto de fondo de la aplicación*/
+	body {
+		margin: 1px;
+		background-color: #d3d3d3;
+	}
+
+	/*Asimismo centramos por defecto todo el texto de la web*/
+	* {
+		font-family: constantia;
+		text-align: center;
+	}
+
+	/*Configuramos el puntero de las listas desordenadas a ninguno por defecto y elimino los márgenes de los elementos, esto servirá 
+	para el menú superior y el lateral*/
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	/*Creo una lista desordenada horizontal en la parte superior que actuará como menú principal*/
+	ul li {
+		float: left;
+		width: 20%;
+	}
+	ul.cabecera li a {
+		display: block;
+	}
+
+	/*Asigno una anchura del 100% a la barra superior para posteriormente evitar que aparezcan objetos a su derecha*/
+	#barraSuperior {
+		background-color: #d3d3d3;
+		position: fixed;
+		width: 100%;
+		clear: both;
+		z-index: 999;
+	}
+
+	/*A continuación creamos la barra lateral izquierda y le damos estilo*/
+	img {
+		width: 100%;
+	}
+
+	#menuIzquierda {
+		margin-top: 40px;
+		float: left;
+		background-color: #333333;
+		position: fixed;
+		width: 20%;
+		height: 100%;
+		z-index: 999;
+	}
+	
+	/*Dentro de la barra lateral creo una lista desordenada vertical que actuará como menú secundario*/
+	ul.izquierda li {
+		float: left;
+		width: 100%;
+	}
+
+	ul.izquierda li a {
+		display: block;
+		text-align: left;
+		padding-left: 5%;
+	}
+	
+	/*Configuro la ubicación y la anchura del div que va a contener el apartado funcional de la web*/
+	.contenido {
+		margin-top: 40px;
+		float: right;
+		width: 80%;
+	}
+
+	/*Por último creo diferentes tipos de letras para los encabezados bajo la clase tituloX*/
+	.titulo {
+		margin: 0px;
+		padding-bottom: 1%;
+		color: #0666fa;
+	}
+
+	.titulo2 {
+		margin: 0px;
+		padding-top: 2%;
+		color: #0666fa;
+	}
+
+	.titulo3 {
+		margin: 0px;
+		padding-top: 2%;
+		color: #990000;
+	}

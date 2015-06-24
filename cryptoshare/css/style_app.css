@@ -1,0 +1,26 @@
+	/*Voy a crear una tabla con celdas cuadradas perfectas dentro del apartado funcional para la página principal*/
+	table {
+	    width:100%;
+	}
+
+	td {
+	    width:20%;
+	    position:relative;
+	}
+
+	td.scanner:after{
+	    content:'';
+	    display:block;
+	    margin-top:100%;
+	}
+
+	div.content {
+	    max-height: 250px;
+	    max-width: 250px;
+	    position:absolute;
+	    top:0;
+	    bottom:0;
+	    left:0;
+	    right:0;
+	    text-align: center;
+	}
