@@ -32,6 +32,10 @@ To do so, you will need to change the password in the file .clave to the passphr
 
 If you want so, you can change your php configuration file with the one providden under debian-configuration. You just need to replace the file /etc/php5/apache2/php.ini with the one mentioned before. This will allow for example, to upload files up to 150MB instead of 8 MB as default.
 
+	4. Accessing the application
+
+Once you have completely set up the application, you will be able to access it with the user admin and password pass1234. Once you entered, with this user you should be able to realice any action you want from inside the application.
+
 
 Should you require asistance or want to notify me about improvements or mistakes you have found, feel free to contact me. Also contact me if you want to develop this software and make it look better or work more effectively, any help will be really apreciated.
 gabriel.velez(@)outlook.com
